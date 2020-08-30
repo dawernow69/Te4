@@ -17,10 +17,13 @@ fetch('http://94.46.140.3:8080/teknikumMenu/api/menu').then(response => {
     let i=0;
     console.log(week + " " + meals[0].dish);
     stycke(week);
-    while(meals){
-      sections(meals[i]);
-      i++;
-    }
+    for(i=0;i<meals.length;i++)
+      sections(meals[i],i);
+    //  i++;
+    //}
+
+   // sections(meals[0]);
+    //sections(meals[1]);
     //return data;
   }).catch(err => {
     // Do something for an error here
@@ -64,22 +67,22 @@ function stycke(week){
     document.getElementById("text").appendChild(paragraph);
 }
 
-function sections(dish){
+function sections(dish, index){
     section = document.createElement("section");
-    section.setAttribute("id","newSection");
+    section.setAttribute("id","newSection" + index);
     document.getElementById("main").appendChild(section);
     text = document.createTextNode(dish.day);
     paragraph = document.createElement("p");    
     paragraph.appendChild(text);
-    document.getElementById("newSection").appendChild(paragraph)
+    document.getElementById("newSection"+index).appendChild(paragraph)
     text = document.createTextNode(dish.dish);
     paragraph = document.createElement("p");    
     paragraph.appendChild(text);
-    document.getElementById("newSection").appendChild(paragraph)
+    document.getElementById("newSection"+index).appendChild(paragraph)
     text = document.createTextNode(dish.alt_dish);
     paragraph = document.createElement("p");    
     paragraph.appendChild(text);
-    document.getElementById("newSection").appendChild(paragraph)
+    document.getElementById("newSection"+index).appendChild(paragraph);
 }
 
 function start(){
