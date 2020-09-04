@@ -1,0 +1,12 @@
+body{
+    height: 98vh;
+    width:98vw;
+    background-color: aliceblue;
+}
+
+#wrapper{
+    height: 95%;
+    width: 95%;
+    margin:auto;
+    background-color: aqua;
+}
