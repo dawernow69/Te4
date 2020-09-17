@@ -16,6 +16,7 @@ fetch('http://94.46.140.3:8080/teknikumMenu/api/menu').then(response => {
     let week=data.week;
     let i=0;
     console.log(week + " " + meals[0].dish);
+    stycke(week);
     while(meals){
       sections(meals[i]);
       i++;
@@ -47,7 +48,7 @@ fetch('http://94.46.140.3:8080/teknikumMenu/api/menu').then(response => {
 
 function init(){
     
-    document.getElementById("btn").onclick = stycke;
+    //document.getElementById("btn").onclick = stycke;
     //jsonObj();
     
     //start();
@@ -56,8 +57,8 @@ function init(){
 }
 window.onload = init;
 
-function stycke(){
-    text = document.createTextNode("stycke");
+function stycke(week){
+    text = document.createTextNode("Vecka " + week);
     paragraph = document.createElement("p");    
     paragraph.appendChild(text);
     document.getElementById("text").appendChild(paragraph);
@@ -67,6 +68,10 @@ function sections(dish){
     section = document.createElement("section");
     section.setAttribute("id","newSection");
     document.getElementById("main").appendChild(section);
+    text = document.createTextNode(dish.day);
+    paragraph = document.createElement("p");    
+    paragraph.appendChild(text);
+    document.getElementById("newSection").appendChild(paragraph)
     text = document.createTextNode(dish.dish);
     paragraph = document.createElement("p");    
     paragraph.appendChild(text);
