@@ -1,15 +1,16 @@
 body{
-    background-color:yellow;
-    height:98vh;
+    background-color:rebeccapurple;
+    height:97vh;
     width:98vw;   
 }
 
 #wrapper{
-    background-color:#f2f2f2;
+    background-color:lime;
     display:grid;
-    height:95%;
+    height:97%;
     width:95%;
     margin:auto;
+    color:hotpink;
     grid-template-columns: auto;
     grid-template-rows: 100px auto;
     grid-gap:10px;
@@ -21,7 +22,7 @@ body{
 }
 
 header{
-    grid-area:header
+    grid-area:header;
 }
 header h1{
     display:inline-block;
@@ -52,7 +53,11 @@ section{
     border-radius:10px;
     margin-bottom: 10px;
     padding:10px;
-    height:180px;
+    height:160px;
+}
+
+section p:first-of-type{
+    font-weight: bold;
 }
 
 
