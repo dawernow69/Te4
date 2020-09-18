@@ -1,8 +1,7 @@
 body{
     background-color:yellow;
     height:98vh;
-    width:98vw;
-   
+    width:98vw;   
 }
 
 #wrapper{
@@ -53,10 +52,11 @@ section{
     border-radius:10px;
     margin-bottom: 10px;
     padding:10px;
+    height:180px;
 }
 
 
-@media (min-width:550px){
+@media (min-width:630px){
     section{
         float:left;
         width:30%;
