@@ -27,7 +27,7 @@ header{
 
 }
 .content2{
-	dispaly:grid;
+	display:grid;
 	grid-area:"content2";
 }
 	
