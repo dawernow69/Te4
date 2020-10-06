@@ -1,6 +1,14 @@
 let form = document.querySelector("form");
+let object;
 
-form.addEventListener("submit", function(event){
-    console.log(form.elements.namedItem.value);
-    console.log(form.elements.class.value);
+form.addEventListener("submit", event => {
+    let namn= form.elements.namn.value;
+    let klass = form.elements.klass.value;
+    object = {
+        "name":namn,
+        "klass":klass
+    };
+    
+    console.log(JSON.stringify(object));
+    event.preventDefault();
 })
