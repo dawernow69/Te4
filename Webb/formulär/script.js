@@ -11,4 +11,5 @@ form.addEventListener("submit", event => {
     
     console.log(JSON.stringify(object));
     event.preventDefault();
-})
+});
+
