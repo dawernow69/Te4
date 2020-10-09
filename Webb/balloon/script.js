@@ -1,15 +1,19 @@
 let p = document.querySelector("p");
+p.style.fontSize=10+"px";
+let stop=false;
 
 function size(s){
-    p.style.fontSize+=s+"px";
+    if(s===1) p.style.fontSize*=1.1;
+    else p.style.fontSize*=0.9;
 }
 
+while(!stop){
+    window.addEventListener("keydown", event=>{
+        if(event.key = "ArrowUp"){
+            size(1);
+        }else if(event.key="ArrowDown"){
+            size(-1);
+        }
 
-window.addEventListener("keydown", event=>{
-    if(event.key = "ArrowUp"){
-        size(50);
-    }else if(event.key="ArrowDown"){
-        size(-50);
-    }
-
-});
+    });
+}
