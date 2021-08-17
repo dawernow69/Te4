@@ -4,11 +4,12 @@ body{
 	
 .wrapper{
 	display:grid;
-	grid-template-columns:1fr 1fr;
-	grid-template-rows: 80px 200px;
+	grid-template-columns:1fr;
+	grid-template-rows: 80px 100px 100px;
 	grid-template-areas: 
-	"header header"
-	"content1 content2";
+	"header"
+	"content1"
+	"content2";
 }
 
 section{
@@ -76,4 +77,14 @@ td:nth-child(2){
 
 th:nth-child(1){
 	text-align: left;
+}
+
+@media screen and (min-width:500px){
+	.wrapper{
+		grid-template-columns:1fr 1fr;
+		grid-template-rows: 80px 200px;
+		grid-template-areas: 
+		"header header"
+		"content1 content2";
+	}
 }
