@@ -5,8 +5,8 @@ body {
 .wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 50px auto auto 50px;
-      grid-template-rows: 50px auto auto 50px;
+  -ms-grid-rows: 50px auto auto 35px;
+      grid-template-rows: 50px auto auto 35px;
   grid-gap: 10px;
       grid-template-areas: "header" "nav" "main" "footer";
 }
@@ -74,23 +74,16 @@ footer p {
     width: 90vw;
     margin: 0 auto;
     background-color: lemonchiffon;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "header header" "nav nav" "section1 section2" "footer footer";
   }
   nav ul {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
   }
-  main section {
-    -ms-grid-row: 3;
-    -ms-grid-column: 2;
-    grid-area: section2;
-  }
-  main section:first-of-type {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    grid-area: section1;
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
 }
 /*# sourceMappingURL=style.css.map */

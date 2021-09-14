@@ -4,7 +4,7 @@ body{
 
 .wrapper{
     display: grid;
-    grid-template-rows: 50px auto auto 50px;
+    grid-template-rows: 50px auto auto 35px;
     grid-gap:10px;
     grid-template-areas: 
     "header"
@@ -60,12 +60,6 @@ footer{
         width: 90vw;
         margin: 0 auto;
         background-color: lemonchiffon;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        "header header"
-        "nav nav"
-        "section1 section2"
-        "footer footer";
     }
     nav{
         ul{
@@ -73,11 +67,10 @@ footer{
         }
     }
     main{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
         section{
-            grid-area:section2;
-        }
-        section:first-of-type{
-            grid-area:section1;
+            
         }
     }
 }
