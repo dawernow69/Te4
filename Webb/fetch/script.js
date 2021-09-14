@@ -7,18 +7,18 @@ let data;
 let myJSON = '{"name":"Tim Tuvestam","age":28}';
 let myObj = JSON.parse(myJSON);
 
-fetch('http://94.46.140.3:8080/teknikumMenu/api/menu').then(response => {
+fetch("http://localhost/fil.json").then(response => {
     return response.json()
   }).then(data => {
     // Work with JSON data here
     console.log(data);
-    let meals=data.meals;
-    let week=data.week;
+    let name=data.name;
+    let age=data.age;
     let i=0;
-    console.log(week + " " + meals[0].dish);
-    stycke(week);
-    for(i=0;i<meals.length;i++)
-      sections(meals[i],i);
+    console.log(name + " " + age);
+    //stycke(week);
+    //for(i=0;i<meals.length;i++)
+     // sections(meals[i],i);
     //  i++;
     //}
 
