@@ -7,7 +7,7 @@ let data;
 let myJSON = '{"name":"Tim Tuvestam","age":28}';
 let myObj = JSON.parse(myJSON);
 
-fetch("http://localhost/fil.json").then(response => {
+fetch('https://its.teknikum.it/~david/test.json').then(response => {
     return response.json()
   }).then(data => {
     // Work with JSON data here
