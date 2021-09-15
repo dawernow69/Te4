@@ -15,7 +15,7 @@ function init(){
 
     images.forEach(element => {
         counter++;
-        createElement(counter);
+        createSection(counter);
     });
 
     click.addEventListener("click",event=>{
@@ -29,21 +29,43 @@ function klicka(){
     console.log("hej");
 }
 
-function createElement(counter){
+function createSection(counter){
     let section = document.createElement("section");
     let sectionClass = "s"+counter;
     console.log(counter,sectionClass);
     section.id = sectionClass;
     click.appendChild(section);
-    createImage(counter, sectionClass);
+    createFigure(counter, sectionClass);
 
 }
 
-function createImage(counter, sectionClass){
+function createImage(counter, figureClass){
     let img = document.createElement("img");
-    console.log(sectionClass);
-    let section = document.getElementById(sectionClass);
-    console.log(section);
+    let figure = document.getElementById(figureClass);
+    console.log(counter,figureClass, figure);
+    let figCaption = document.createElement("figcaption");
+   
+  
     img.src = images[counter-1].src;
-    section.appendChild(img);
+    text = images[counter-1].user + " " + images[counter-1].title;
+    figCaption.innerHTML = text;
+    
+    figure.appendChild(img);
+    figure.appendChild(figCaption);
+
+}
+
+function createFigure(counter, sectionClass){
+    let figure = document.createElement("figure");
+    
+    let text; 
+    let section = document.getElementById(sectionClass);
+    let figureClass = "f"+counter;
+    figure.id = figureClass;
+    console.log(counter,figureClass);
+    
+    section.appendChild(figure);
+    createImage(counter, figureClass);
+
+
 }
