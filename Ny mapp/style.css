@@ -1,0 +1,81 @@
+body{
+    width:99vw;
+    height: 98vh;
+    background-color: aqua;
+}
+
+.wrapper{
+    height: 95%;
+    width: 95%;
+    background-color: bisque;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 100px auto 50px;
+    grid-gap:20px;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+
+#sida2 .wrapper{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px auto 50px;
+    grid-gap:20px;
+    grid-template-areas: 
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+}
+
+header{
+    grid-area: header;
+}
+
+header>h1{
+    margin: 0;
+    text-align: center;
+    line-height: 2;
+}
+
+nav{
+    grid-area: nav;
+}
+
+nav>ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;;
+}
+
+nav li{
+    text-align: center;
+    background-color: chartreuse;
+    line-height: 3;
+    font-size: 1.5em;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+a:link, a:visited, a:focus, a:hover,a:active{
+    color: darkblue;
+}
+
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+footer{
+    grid-area: footer;
+    text-align: center;
+    font-size: small;
+}
