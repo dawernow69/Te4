@@ -1,0 +1,107 @@
+body {
+  background-color: bisque;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: 80px 100px auto auto 50px;
+      grid-template-rows: 80px 100px auto auto 50px;
+      grid-template-areas: "header" "nav" "main" "aside" "footer";
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: larger;
+  text-align: center;
+  line-height: 3;
+}
+
+nav {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: nav;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+nav li {
+  text-align: center;
+  list-style-type: none;
+  border: 1px solid yellowgreen;
+  border-radius: 10%;
+}
+
+main {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: main;
+}
+
+aside {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: aside;
+}
+
+footer {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: footer;
+}
+
+footer p {
+  font-size: small;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    background-color: azure;
+    width: 90vw;
+    margin: 0 auto;
+    -ms-grid-columns: 3fr 1fr;
+        grid-template-columns: 3fr 1fr;
+    -ms-grid-rows: 80px 50px auto 50px;
+        grid-template-rows: 80px 50px auto 50px;
+        grid-template-areas: "header header" "nav nav" "main aside" "footer footer";
+  }
+  nav ul {
+    -ms-grid-rows: 100%;
+        grid-template-rows: 100%;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  #sida2 .wrapper {
+    -ms-grid-columns: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
+    -ms-grid-rows: 80px auto 50px;
+        grid-template-rows: 80px auto 50px;
+        grid-template-areas: "header header header" "nav main aside" "footer footer footer";
+  }
+  #sida2 nav ul {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}
+/*# sourceMappingURL=style.css.map */
