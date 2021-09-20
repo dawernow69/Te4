@@ -30,19 +30,31 @@ function init(){
 window.onload = init;
 
 function klicka(article){
-    console.log("hej" + article);
+    console.log(article);
 }
 
 function createArticle(counter){
     let article = document.createElement("article");
-    let articleId = "s"+counter;
+    let articleId = "a"+counter;
     article.id = articleId;
     click.appendChild(article);
     createFigure(counter, articleId);
-    article.addEventListener("click",event=>{
+    createFameButton(counter,articleId);
+    //createShameButton();
+    let fame = document.getElementById("fame"+counter);
+    //let shame = document.getElementById("shame");
+    /*article.addEventListener("click",event=>{
         klicka(articleId);
         event.preventDefault();
+    });*/
+    fame.addEventListener("click",event=>{
+        klicka("fame "+ articleId);
+        event.preventDefault();
     });
+    /*shame.addEventListener("click",event=>{
+        klicka(articleId);
+        event.preventDefault();
+    });*/
 }
 
 function createImage(counter, figureId){
@@ -70,6 +82,12 @@ function createFigure(counter, articleId){
     
     article.appendChild(figure);
     createImage(counter, figureId);
+}
 
-
+function createFameButton(counter, articleId){
+    let article = document.getElementById(articleId);
+    let button = document.createElement("button");
+    button.innerHTML = "Fame";
+    button.id = "fame" + counter;
+    article.appendChild(button);
 }
