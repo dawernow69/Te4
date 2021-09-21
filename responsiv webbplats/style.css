@@ -57,7 +57,7 @@ main section {
 }
 
 main img {
-  height: 200px;
+  height: 100px;
 }
 
 footer {
@@ -86,8 +86,8 @@ footer p {
   main #klicka {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto auto auto auto;
-        grid-template-columns: auto auto auto auto;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
     -ms-flex-pack: distribute;
