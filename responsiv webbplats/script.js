@@ -57,7 +57,11 @@ function createArticle(counter){
         event.preventDefault();
     });
 }
-
+/**
+ * 
+ * @param  {} counter
+ * @param  {} figureId
+ */
 function createImage(counter, figureId){
     let img = document.createElement("img");
     let figure = document.getElementById(figureId);
