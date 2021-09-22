@@ -22,6 +22,16 @@ function init(){
         createArticle(counter);
        
     });
+    /*counter = 0;
+    const buttons = document.querySelectorAll("#fame button");
+
+    for (const button of buttons){
+        button.addEventListener("click",event=>{
+            klicka(counter);
+            event.preventDefault();
+        });
+        counter++;
+    }*/
 
     /*click.addEventListener("click",event=>{
         klicka();
@@ -31,7 +41,7 @@ function init(){
 window.onload = init;
 
 function klicka(counter){
-    console.log(images[counter-1].user);
+    console.log(images[counter-1].title);
 }
 /**
  * @param  {} counter
@@ -96,7 +106,9 @@ function createFameButton(counter, articleId){
     let article = document.getElementById(articleId);
     let button = document.createElement("button");
     button.innerHTML = "Fame";
+    button.className = "fame";
     button.id = "fame" + counter;
+    
     article.appendChild(button);
 }
 
@@ -105,6 +117,7 @@ function createShameButton(counter, articleId){
     let button = document.createElement("button");
     button.innerHTML = "Shame";
     button.id = "shame" + counter;
+    button.className = "shame";
     article.appendChild(button);
 }
 

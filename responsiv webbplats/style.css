@@ -52,12 +52,62 @@ main {
   grid-area: main;
 }
 
-main section {
-  border: 1px dotted maroon;
+main article {
+  display: -ms-grid;
+  display: grid;
+  border: 1px solid maroon;
+  margin-bottom: 10px;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
 }
 
-main img {
+main article figure {
+  margin: 0 auto;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/span 3;
+}
+
+main article figure img {
+  width: 200px;
   height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: auto;
+}
+
+main article figure figcaption {
+  text-align: center;
+}
+
+main article progress {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  grid-column: 1/span3;
+  width: 15em;
+  margin: auto;
+}
+
+main article .fame {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+main article .shame {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  -ms-grid-column: 3;
+  grid-column: 3;
+}
+
+main article:last-of-type {
+  margin-bottom: 0;
 }
 
 footer {
@@ -68,12 +118,13 @@ footer {
 }
 
 footer p {
+  line-height: 2;
   margin: 0;
   font-size: small;
   text-align: center;
 }
 
-@media (min-width: 350px) {
+@media (min-width: 650px) {
   .wrapper {
     width: 90vw;
     margin: 0 auto;
@@ -92,13 +143,19 @@ footer p {
         grid-template-rows: auto;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    grid-gap: 10px;
   }
-  main #klicka article {
-    border: 2px solid blueviolet;
+  main article:last-of-type {
+    margin-bottom: 10px;
   }
-  main #klicka figcaption {
-    text-align: center;
+}
+
+@media (min-width: 1400px) {
+  main #klicka {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  main article:last-of-type {
+    margin-bottom: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
