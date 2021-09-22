@@ -15,7 +15,8 @@ function init(){
     click = document.getElementById("klicka");
     let counter=0;
     let len = images.length;
-
+    //funktion för att hämta JSON objekt
+    
     images.forEach(element => {
         counter++;
         createArticle(counter);
@@ -30,9 +31,11 @@ function init(){
 window.onload = init;
 
 function klicka(counter){
-    console.log(images[counter-1].title);
+    console.log(images[counter-1].user);
 }
-
+/**
+ * @param  {} counter
+ */
 function createArticle(counter){
     let article = document.createElement("article");
     let articleId = "a"+counter;
