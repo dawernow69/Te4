@@ -123,8 +123,8 @@ footer{
             grid-template-rows: auto;
             justify-content: space-around;
         }
-        article:last-of-type{
-            margin-bottom: 10px;
+        article:nth-last-child(-n+2){
+            margin-bottom: 0;
         } 
     }
 }
@@ -134,8 +134,8 @@ footer{
         #klicka{
             grid-template-columns: 1fr 1fr 1fr;
         }
-        article:last-of-type{
-            margin-bottom: 10px;
+        article:nth-last-child(-n+3){
+            margin-bottom: 0;
         } 
     }
 }
@@ -145,8 +145,8 @@ footer{
         #klicka{
             grid-template-columns: 1fr 1fr 1fr 1fr;
         }
-        article:last-of-type{
-            margin-bottom: 10px;
+        article:nth-last-child(-n+4){
+            margin-bottom: 0;
         } 
     }
 }
