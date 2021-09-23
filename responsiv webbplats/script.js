@@ -107,9 +107,11 @@ function createFameButton(counter, articleId){
     let button = document.createElement("button");
     button.innerHTML = "Fame";
     button.className = "fame";
-    button.id = "fame" + counter;
-    
+    button.id = "fame" + counter;    
     article.appendChild(button);
+    let paragraph = document.createElement("p");
+    paragraph.innerHTML = images[counter-1].fame;
+    article.appendChild(paragraph);
 }
 
 function createShameButton(counter, articleId){
@@ -119,6 +121,9 @@ function createShameButton(counter, articleId){
     button.id = "shame" + counter;
     button.className = "shame";
     article.appendChild(button);
+    let paragraph = document.createElement("p");
+    paragraph.innerHTML = images[counter-1].shame;
+    article.appendChild(paragraph);
 }
 
 function createProgressBar(counter, articleId){
