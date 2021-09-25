@@ -5,6 +5,7 @@ body{
 .wrapper{
     display: grid;
     grid-template-rows: 50px auto auto 35px;
+    
     grid-gap:10px;
     grid-template-areas: 
     "header"
@@ -40,6 +41,10 @@ nav{
 
 main{
     grid-area: main;
+    #klicka{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    }
     article{
         display: grid;
         border: 1px solid maroon;
@@ -116,7 +121,7 @@ footer{
             grid-template-columns: 1fr 1fr 1fr;
         }
     }
-    main{
+    /*main{
         #klicka{
             display:grid;
             grid-template-columns: 1fr 1fr;
@@ -126,9 +131,9 @@ footer{
         article:nth-last-child(-n+2){
             margin-bottom: 0;
         } 
-    }
+    }*/
 }
-
+/*
 @media (min-width:1000px){
     main{
         #klicka{
@@ -149,4 +154,4 @@ footer{
             margin-bottom: 0;
         } 
     }
-}
+}*/
