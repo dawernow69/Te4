@@ -1,13 +1,19 @@
 let click;
 let images = [
-    {"imageID":1,src:"./img/bild1.png",date:"2021-09-14",title:"En bild",user:"Tim Tuvestam",fame:4,shame:2},
-    {"imageID":2,src:"./img/bild2.png",date:"2021-09-14",title:"En annan bild",user:"Tim Tuvestam",fame:3,shame:8},
-    {"imageID":3,src:"./img/bild3.png",date:"2021-09-14",title:"Ytterligare en bild",user:"David Wernow",fame:9,shame:5},
-    {"imageID":4,src:"./img/bild4.png",date:"2021-09-14",title:"En sista bild",user:"David Wernow",fame:8,shame:7},
-    {"imageID":1,src:"./img/bild1.png",date:"2021-09-14",title:"En bild",user:"Tim Tuvestam",fame:1,shame:9},
-    {"imageID":2,src:"./img/bild2.png",date:"2021-09-14",title:"En annan bild",user:"Tim Tuvestam",fame:2,shame:4},
-    {"imageID":3,src:"./img/bild3.png",date:"2021-09-14",title:"Ytterligare en bild",user:"David Wernow",fame:5,shame:5},
-    {"imageID":4,src:"./img/bild4.png",date:"2021-09-14",title:"En sista bild",user:"David Wernow",fame:9,shame:0}
+    {imageID:1,src:"./img/bild1.png",date:"2021-09-14",title:"En bild",user:"Tim Tuvestam",fame:4,shame:2},
+    {imageID:2,src:"./img/bild2.png",date:"2021-09-14",title:"En annan bild",user:"Tim Tuvestam",fame:3,shame:8},
+    {imageID:3,src:"./img/bild3.png",date:"2021-09-14",title:"Ytterligare en bild",user:"David Wernow",fame:9,shame:5},
+    {imageID:4,src:"./img/bild4.png",date:"2021-09-14",title:"En sista bild",user:"David Wernow",fame:8,shame:7},
+    {imageID:5,src:"./img/bild1.png",date:"2021-09-14",title:"En bild",user:"Tim Tuvestam",fame:1,shame:9},
+    {imageID:6,src:"./img/bild2.png",date:"2021-09-14",title:"En annan bild",user:"Tim Tuvestam",fame:2,shame:4},
+    {imageID:7,src:"./img/bild3.png",date:"2021-09-14",title:"Ytterligare en bild",user:"David Wernow",fame:5,shame:5},
+    {imageID:8,src:"./img/bild4.png",date:"2021-09-14",title:"En sista bild",user:"David Wernow",fame:9,shame:0}
+]
+
+let comments = [
+    {"commentID":1,imageID:2,text:"En bra bild",user:"Tim Tuvestam"},
+    {"commentID":2,imageID:3,text:"En sämre bild",user:"Tim Tuvestam"},
+    {"commentID":2,imageID:3,text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum?" ,user:"Tim Tuvestam"},
 ]
 
 
@@ -57,6 +63,7 @@ function createArticle(counter){
     createShameButton(counter,articleId);
     let fame = document.getElementById("fame"+counter);
     let shame = document.getElementById("shame"+counter);
+    createComments(counter,articleId);
     /*article.addEventListener("click",event=>{
         klicka(articleId);
         event.preventDefault();
@@ -69,6 +76,7 @@ function createArticle(counter){
         klicka(counter);
         event.preventDefault();
     });
+  
 }
 /**
  * 
@@ -131,8 +139,22 @@ function createProgressBar(counter, articleId){
     let progress = document.createElement("progress");
     let min = images[counter-1].fame;
     let max = images[counter-1].fame + images[counter-1].shame;
-    console.log(min + " " + max);
     progress.max = max;
     progress.value = min;
     article.appendChild(progress);
+}
+
+function createComments(counter, articleId){
+    for(let i = 0; i<comments.length; i++){
+        console.log("Bild: " + images[counter-1].imageID);
+        console.log("Kommentar " + comments[i].imageID);
+      if(comments[i].imageID === images[counter-1].imageID){
+       let article = document.getElementById(articleId);
+        let article2 = document.createElement("article");
+        article2.innerHTML = comments[i].text;
+        article.appendChild(article2);
+      }
+    }
+    
+    
 }
