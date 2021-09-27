@@ -50,6 +50,9 @@ main {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: main;
+  /*article:last-of-type{
+        margin-bottom: 0;
+    } */
 }
 
 main #klicka {
@@ -131,10 +134,6 @@ main article p:first-of-type {
 
 main article button {
   border-radius: 10%;
-}
-
-main article:last-of-type {
-  margin-bottom: 0;
 }
 
 footer {
