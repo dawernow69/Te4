@@ -41,7 +41,7 @@ nav{
 
 main{
     grid-area: main;
-    #klicka{
+    #images{
         display: grid;
         grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     }
@@ -99,6 +99,17 @@ main{
         button{
             border-radius: 10%;
         }
+        
+
+    }
+    section+section{
+        position: absolute;
+        top:10vh;
+        left:10vw;
+        width:80vw;
+        height:60vh;
+
+        //grid-column:1;
     }
     /*article:last-of-type{
         margin-bottom: 0;

@@ -18,9 +18,9 @@ let comments = [
 
 
 function init(){
-    click = document.getElementById("klicka");
+    click = document.getElementById("images");
     let counter=0;
-    let len = images.length;
+    //let len = images.length;
     //funktion för att hämta JSON objekt
     
     images.forEach(element => {
@@ -47,6 +47,9 @@ function init(){
 window.onload = init;
 
 function klicka(counter){
+    //let article = document.createElement("article");
+    //article.style.width = "80vw";
+    
     console.log(images[counter-1].title);
 }
 /**
@@ -58,24 +61,24 @@ function createArticle(counter){
     article.id = articleId;
     click.appendChild(article);
     createFigure(counter, articleId);
-    createProgressBar(counter,articleId);
-    createFameButton(counter,articleId);
-    createShameButton(counter,articleId);
-    let fame = document.getElementById("fame"+counter);
-    let shame = document.getElementById("shame"+counter);
-    createComments(counter,articleId);
-    /*article.addEventListener("click",event=>{
-        klicka(articleId);
+    //createProgressBar(counter,articleId);
+    //createFameButton(counter,articleId);
+    //createShameButton(counter,articleId);
+    //let fame = document.getElementById("fame"+counter);
+    //let shame = document.getElementById("shame"+counter);
+    //createComments(counter,articleId);
+    article.addEventListener("click",event=>{
+        klicka(counter);
         event.preventDefault();
-    });*/
-    fame.addEventListener("click",event=>{
+    });
+    /*fame.addEventListener("click",event=>{
         klicka(counter);
         event.preventDefault();
     });
     shame.addEventListener("click",event=>{
         klicka(counter);
         event.preventDefault();
-    });
+    });*/
   
 }
 /**
