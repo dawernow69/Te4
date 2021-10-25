@@ -1,0 +1,92 @@
+.wrapper {
+  background-color: aliceblue;
+  display: -ms-grid;
+  display: grid;
+  width: 95%;
+  margin: 0 auto;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 50px auto 50px;
+      grid-template-rows: 50px auto 50px;
+      grid-template-areas: "header" "main" "footer";
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+}
+
+main article {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+main article h2 {
+  display: -ms-grid;
+  display: grid;
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+  background-color: aquamarine;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "day . date";
+}
+
+main article h2 .day {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: day;
+  padding-left: 10px;
+}
+
+main article h2 .day::first-letter {
+  text-transform: capitalize;
+}
+
+main article h2 .date {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: date;
+  text-align: right;
+  padding-right: 10px;
+}
+
+main article p {
+  padding-left: 10px;
+}
+
+footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  margin-top: 15px;
+  text-align: center;
+}
+
+footer p {
+  font-size: small;
+  margin: 0;
+  padding: 0;
+}
+/*# sourceMappingURL=style.css.map */
