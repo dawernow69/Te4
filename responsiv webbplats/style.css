@@ -55,7 +55,7 @@ main {
     } */
 }
 
-main #klicka {
+main #images {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
@@ -145,6 +145,14 @@ main article p:first-of-type {
 
 main article button {
   border-radius: 10%;
+}
+
+main section + section {
+  position: absolute;
+  top: 10vh;
+  left: 10vw;
+  width: 80vw;
+  height: 60vh;
 }
 
 footer {
