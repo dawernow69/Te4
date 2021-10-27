@@ -1,0 +1,50 @@
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "main";
+}
+
+main {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: main;
+}
+
+main article {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  border: 1px solid lightcoral;
+}
+
+main article h2 {
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "day . date";
+}
+
+main article .day {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: day;
+}
+
+main article .day::first-letter {
+  text-transform: capitalize;
+}
+
+main article .date {
+  text-align: right;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: date;
+}
+/*# sourceMappingURL=style.css.map */
