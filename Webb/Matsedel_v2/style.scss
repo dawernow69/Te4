@@ -1,0 +1,34 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    grid-template-areas: "main";
+}
+
+main{
+    grid-area: main;
+    article{
+        display:grid;
+        grid-template-rows: auto auto;
+        border:1px solid lightcoral;
+
+        h2{
+            margin:0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "day . date";
+        }
+        .day{
+            grid-area: day;
+        }
+        .day::first-letter{
+            text-transform: capitalize;
+        }
+        .date{
+            text-align: right;
+            grid-area: date;
+        }
+    }
+}

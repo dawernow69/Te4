@@ -1,0 +1,7 @@
+[
+    {"imageID":1,"src":"./img/bild1.png","date":"2021-09-14","title":"En bild","user":"Tim Tuvestam","fame":4,"shame":2},
+    {"imageID":2,"src":"./img/bild2.png","date":"2021-09-14","title":"En annan bild","user":"Tim Tuvestam","fame":3,"shame":8},
+    {"imageID":3,"src":"./img/bild3.png","date":"2021-09-14","title":"Ytterligare en bild","user":"David Wernow","fame":9,"shame":5},
+    {"imageID":4,"src":"./img/bild4.png","date":"2021-09-14","title":"En sista bild","user":"David Wernow","fame":8,"shame":7}
+    
+]
