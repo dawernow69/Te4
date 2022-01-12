@@ -1,8 +1,10 @@
 let dishes = [
     {date:"2021-11-18", dish:"Måndag rätt 1"},
-    {date:"2021-11-18", dish:"Måndag rätt 2"},
+    //{date:"2021-11-18", dish:"Måndag rätt 2"},
     {date:"2021-12-19", dish:"Tisdag rätt 1"},
     {date:"2021-12-19", dish:"Tisdag rätt 2"},
+    {date:"2021-12-19", dish:"Tisdag rätt 3"},
+    {date:"2021-12-19", dish:"Tisdag rätt 4"},
     {date:"2021-13-20", dish:"Onsdag rätt 1"},
     {date:"2021-13-20", dish:"Onsdag rätt 2"},
     {date:"2021-00-21", dish:"Torsdag rätt 1"},
@@ -19,15 +21,16 @@ let articles;
 
 function init(){
     let counter = 0;
-    let dayCounter = 0
+    let dayCounter = -1;
     articles = document.getElementById("articles");
     console.log(day[1]);
     dishes.forEach(element => {
         if(counter == 0 || element.date !== dishes[counter-1].date){
+            dayCounter++;
             createNewArticle(element, dayCounter);
         }else{
             createNewParagraph(element, dayCounter);
-            dayCounter++;
+            //dayCounter++;
         }
         counter++;
     });
