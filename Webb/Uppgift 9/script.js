@@ -22,12 +22,14 @@ function init() {
 				"KASTRULL","KAFFEBRYGGARE","TALLRIK","SOFFBORD","TRASMATTA","FLYGPLAN","FLYGPLATS","TANGENTBORD"];
 
 	startGameBtn = document.getElementById("startGameBtn");
-	startGameBtn.onclick = startGame;
+	//startGameBtn.onclick = startGame;
+	startGameBtn.addEventListener("click",startGame);
 	//startGameBtn.disabled = false;
 	
 	letterButtons = document.getElementById("letterButtons").getElementsByTagName("button");
 	for(i=0;i<letterButtons.length;i++) {
-		letterButtons[i].onclick = guessLetter;
+		//letterButtons[i].onclick = guessLetter;
+		letterButtons[i].addEventListener("click",guessLetter);
 		//letterButtons[i].disabled = true;
 	}
 
@@ -126,6 +128,6 @@ function changeButtonActivition(status){
 		for(let i=0;i<letterButtons.length;i++) letterButtons[i].disabled = true;
 	}else{
 		startGameBtn.disabled = true;
-	for(let i=0;i<letterButtons.length;i++) letterButtons[i].disabled = false;
+		for(let i=0;i<letterButtons.length;i++) letterButtons[i].disabled = false;
 	}
 }
