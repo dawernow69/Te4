@@ -1,9 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Head from "./headline.jsx";
+import List from "./list.jsx";
 
-function Headline(props){
+/*function Headline(props){
     return <h1>{props.title}</h1>
-}
+}*/
+
 
 function Button(props){
     return <button type="submit">{props.message}</button>;
@@ -11,20 +14,23 @@ function Button(props){
 
 function Box(props){
     return <div>
-        <h1>{props.title}</h1>
+        <Head title={props.title}/>
+        <List menu={props.menu}/> 
+       
+        
         <p>{props.message}</p>
     </div>;
 }
 
-function ListItem(props){
+/*function ListItem(props){
     return <li><input type="checkbox"><label>{props.title}</label></input></li>;
 }
 
 function List(props){
-    return <Headline title="Lista"/>
-}
+    return <Head title="Lista"/>
+}*/
 
 //ReactDOM.render(<Headline title = "Hello world" />,document.getElementById("root"));
-
-ReactDOM.render(<ListItem title="Hello world" />,
+const numbers =[1,2,3];
+ReactDOM.render(<Box title="Hello world" message="En liten text" numbers={numbers}/>,
 document.getElementById("root"));
