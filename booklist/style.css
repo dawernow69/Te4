@@ -1,0 +1,116 @@
+body {
+  background-color: aliceblue;
+  color: darkgreen;
+  height: 98vh;
+}
+
+.wrapper {
+  height: 98%;
+  width: 90%;
+  background-color: antiquewhite;
+  color: cadetblue;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 80px 50px auto 50px;
+      grid-template-rows: 80px 50px auto 50px;
+  grid-gap: 20px;
+      grid-template-areas: "header" "nav" "main" "footer";
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+}
+
+header h1 {
+  text-align: center;
+  font-size: x-large;
+}
+
+nav {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: nav;
+}
+
+nav ul {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+nav ul li {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav ul a {
+  display: inline-block;
+  text-decoration: none;
+  height: 100%;
+  line-height: 3;
+}
+
+main {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: main;
+}
+
+main table {
+  margin: 0 auto;
+  width: 70%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+main td, main th {
+  border: 1px solid black;
+}
+
+main tr:nth-child(even) {
+  background-color: aliceblue;
+}
+
+main th:nth-child(1) {
+  text-align: left;
+}
+
+main form {
+  width: 50%;
+  padding-left: 10em;
+}
+
+main form label {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}
+
+main form input[type="text"] {
+  margin-left: 10px;
+}
+
+main form input[type="submit"] {
+  margin-left: 115px;
+}
+
+footer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: footer;
+}
+
+footer p {
+  font-size: xx-small;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

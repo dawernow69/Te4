@@ -115,13 +115,13 @@ function startCheckCampaign(){
 
 //Kontroll av kampanjkod mot reguljärt uttryck
 function checkCampaign(){
-	var re; //Array för reguljärt uttryck för kampanjen
+	/*var re; //Array för reguljärt uttryck för kampanjen
 	re = [
 		/^[A-Za-z]{3}[-]\d{2}[-][A-Za-z]{1}\d{1}$/ //Kampanjkod
-	];
+	];*/
 	
-	if(re[0].test(this.value)) this.style.backgroundColor="#6F9"; 
-	else this.style.backgroundColor="F99";
+	if(re[2].test(this.value)) this.style.backgroundColor="#6F9"; 
+	else this.style.backgroundColor="#F99";
 }
 
 //Konverterar små bokstäver till stora bokstäver
