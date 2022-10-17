@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "jest": "^29.0.3",
+    "qunit": "^2.19.1"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": ["json", "html"]
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
