@@ -46,11 +46,11 @@ function init(){
 }
 window.onload = init;
 
-function klicka(counter){
+function klicka(counter, id){
     //let article = document.createElement("article");
     //article.style.width = "80vw";
     
-    console.log(images[counter-1].title);
+    console.log(images[counter-1].title + " " + id);
 }
 /**
  * @param  {} counter
@@ -61,6 +61,7 @@ function createArticle(counter){
     article.id = articleId;
     click.appendChild(article);
     createFigure(counter, articleId);
+    console.log(counter);
     //createProgressBar(counter,articleId);
     //createFameButton(counter,articleId);
     //createShameButton(counter,articleId);
@@ -68,7 +69,7 @@ function createArticle(counter){
     //let shame = document.getElementById("shame"+counter);
     //createComments(counter,articleId);
     article.addEventListener("click",event=>{
-        klicka(counter);
+        klicka(counter,images[counter-1].imageID);
         event.preventDefault();
     });
     /*fame.addEventListener("click",event=>{

@@ -9,9 +9,9 @@ var errMsg;			// Array med felmeddelanden
 // Initiera globala variabler och koppla funktion till knapp
 function init() {
 	var i;		// Loopvariabel
-	formElem = document.getElementById("booking");
+	//formElem = document.getElementById("booking");
+	formElem = document.querySelector("form");
 	totalCostElem = document.getElementById("totalCost");
-	
 	for(i=0;i<formElem.roomType.length;i++){
 		addListener(formElem.roomType[i],"click",checkIfFamilyRoom);
 		addListener(formElem.roomType[i],"click",calculateCost);
