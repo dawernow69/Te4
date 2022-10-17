@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
+    <script src="scriptb.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Books - Boklista</title>
 </head>
@@ -21,18 +21,22 @@
             </ul>
         </nav>
         <main>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Titel</th>
-                        <th>Författare</th>
-                    </tr>
-                </thead>
-                <tbody>
-                   
-                </tbody>
-            </table>
-        </main>
+            <section>
+                <form>
+                    <p>
+                        <label for="title">Titel:</label>
+                        <input type="text" name="title" id="title">
+                    </p>
+                    <p>
+                        <label for="author">Författare:</label>
+                        <input type="text" name="author" id="author">
+                    </p>
+                    <p>
+                        <button>Ändra</button>
+                        <button>Ta bort</button>
+                    </p>
+                </form>
+            </section>
         <footer>
             <p>Skapad av David Wernow för TE4</p>
         </footer>

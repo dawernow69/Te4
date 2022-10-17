@@ -25,6 +25,7 @@ async function addBook(){
     console.log(res);
     if(res==201){
         console.log("OK");
+        location.href="index.html";
     }else{
         console.log("Något är fel");
     }

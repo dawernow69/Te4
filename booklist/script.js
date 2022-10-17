@@ -28,7 +28,11 @@ async function createTable(){
 function appendTable(book){
      let tr = document.createElement("tr");
      let cell = document.createElement("td");
-     cell.appendChild(document.createTextNode(book.title));
+     let a = document.createElement("a");
+     a.href = "changeBook.html?id=" + book.id;
+     a.appendChild(document.createTextNode(book.title));
+     cell.appendChild(a);
+     //cell.appendChild(document.createTextNode("<a href='changeBook?id='" + book.id + "'>"+book.title+"</a>"));
      tr.appendChild(cell);
      cell= document.createElement("td");
      cell.appendChild(document.createTextNode(book.author));
@@ -44,5 +48,14 @@ async function getBooks(){
     console.log(response);
 
    let json = response.json();
+    return json;
+}
+
+async function getBook(id){
+    let url = "https://localhost:7048/BookApp/" + id;
+    conslole.log(url);
+
+    let response = await fetch(url);
+    let json = response.json();
     return json;
 }
