@@ -1,4 +1,4 @@
-/*function sum(min,max){
+function sum(min,max){
     let summa=0;
     for(let i=min;i<max;i++){
         summa+=i; 
@@ -12,8 +12,11 @@ let stor = Number(prompt("Ange största talet"));
 let res = sum(minst,stor);
 alert(res);
 document.write(sum(minst,stor));
-*/
-let myForm;
+
+
+
+
+/*let myForm;
 let res;
 let myButton;
 
@@ -35,7 +38,7 @@ function init(){
         event.preventDefault();
     });
 }
-window.onload = init;
+window.onload = init;*/
 
 /*function click(){    
     let myText=myForm.elements.text.value;
@@ -50,7 +53,7 @@ window.onload = init;
 
 //myButton.onclick = click;
 
-function palindrome(str) {
+/*function palindrome(str) {
     //let re = /[\W_0-9]/g;
     let re = /[^a-zåäö]/g;
     let lowRegStr = str.toLowerCase().replace(re, '');

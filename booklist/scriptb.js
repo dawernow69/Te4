@@ -18,11 +18,6 @@ function init(){
         deleteBook(id);
         event.preventDefault();
     });
-    /*form.addEventListener("submit", event=>{
-        
-        addBook(id);
-    event.preventDefault();
-    });*/
 }
 window.onload = init;
 
