@@ -32,7 +32,6 @@ function appendTable(book){
      a.href = "changeBook.html?id=" + book.id;
      a.appendChild(document.createTextNode(book.title));
      cell.appendChild(a);
-     //cell.appendChild(document.createTextNode("<a href='changeBook?id='" + book.id + "'>"+book.title+"</a>"));
      tr.appendChild(cell);
      cell= document.createElement("td");
      cell.appendChild(document.createTextNode(book.author));
