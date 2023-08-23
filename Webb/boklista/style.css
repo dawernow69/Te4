@@ -7,6 +7,45 @@ body{
 #wrapper{
     width:90%;
     height:90%;
-    margin: 0 auto;
-    background-color: blanchedalmond;
+    display: grid;
+    grid-template-rows: 80px auto;
+    grid-template-areas: 
+    "header"
+    "main";
+    margin: 15px auto;
+    background-color: rgb(221, 205, 255);
+}
+
+header{
+    grid-area: header;
+}
+
+header h1{
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 0;
+}
+
+main{
+    grid-area: main;
+}
+
+h2{
+    text-align: center;
+    color: dodgerblue;
+}
+
+table{
+    width:50%;
+    margin:0 auto;
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+th,td{
+    border:1px solid black;
+}
+
+th{
+    text-align: left;
 }
