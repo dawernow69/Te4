@@ -1,0 +1,75 @@
+body{
+    height: 98vh;
+    background-color: aliceblue;
+}
+
+.wrapper{
+    width:90%;
+    height:90%;
+    background-color: aqua;
+    margin:auto;
+    display: grid;
+    grid-template-rows: 80px auto 50px;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+
+}
+
+header{
+    grid-area: header;
+    background-color: crimson;
+}
+
+header > h1{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+main{
+    grid-area: main;
+}
+
+main > h2{
+    text-align: center;
+}
+
+table, form{
+    width: 50%;
+    margin: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td,th{
+    border: 1px solid black;
+}
+
+th{
+    text-align: left;
+}
+
+footer{
+    grid-area: footer;
+    background-color: chartreuse;
+}
+
+footer > p{
+    
+    text-align: center;
+    font-size: small;
+}
+
+label{
+    display: inline-block;
+    width:70px;
+}
+
+input[type="text"]{
+    margin-left: 100px;
+}
+
+button[type="submit"]{
+    margin-left: 175px;
+}
