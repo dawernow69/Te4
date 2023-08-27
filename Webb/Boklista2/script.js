@@ -5,20 +5,31 @@ let title;
 //let author1;
 //let title1;
 
-let Books={book:[
+/*let Books={book:[
     {"author":"Tim Tuvestam", "title":"Programmering i Visual Basic"},
     {"author":"Lars Gunther", "title":"Webbutveckling 1"}
-]}
+]}*/
 
 function init(){
-    books = document.getElementById("books");
+    /*books = document.getElementById("books");
     for(element of Books.book){
         console.log(element);
         createTableRow(element);
-    }
+    }*/
+
+    getBooks();
 }
 window.onload = init;
 
+async function getBooks(){
+    let Books = await getBooksFetch();
+
+    console.log(Books);
+
+    Books.array.forEach(element => {
+        createTableRow(element);
+    });
+}
 
 function createTableRow(el){
     let tr = document.createElement("tr");
@@ -34,16 +45,10 @@ function createTableRow(el){
     console.log(tr);
 }
 
+async function getBooksFetch(){
+    const path = "https://its.te4.nu/~david/test";
 
-/*title = document.getElementById("title");
-
-author1 = document.getElementById("author1");
-title1 = document.getElementById("title1");
-
-author.innerHTML = books.book[0].author;
-title.innerHTML = books.book[0].title;
-
-author1.innerHTML = books.book[1].author;
-title1.innerHTML = books.book[1].title;
-
-console.log(author);*/
+    let response = await fetch(path);
+    let json = response.json();
+    return json;
+}
