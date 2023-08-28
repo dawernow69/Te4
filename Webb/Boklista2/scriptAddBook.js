@@ -25,6 +25,8 @@ async function addBook(){
 
     console.log(res);
 
+    //Felhantering av något slag behövs
+
 }
 
 

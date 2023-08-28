@@ -20,7 +20,8 @@ let day = [
 ]
 
 let articles;
-
+/**
+ */
 function init(){
     let dayCounter = -1;
     let dishesCounter = 0;
@@ -40,7 +41,10 @@ function init(){
    
 }
 window.onload = init;
-
+/**
+ * @param  {object} object
+ * @param  {number} counter
+ */
 function createArticle(object, counter){
     let article = document.createElement("article");
     article.id = "a" + counter;

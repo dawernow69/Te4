@@ -2,6 +2,8 @@
 //let myObject = JSON.parse(myJson);
 let books; //Referens till tabellen
 let title;
+
+let Books = [];
 //let author1;
 //let title1;
 
@@ -11,8 +13,8 @@ let title;
 ]}*/
 
 function init(){
-    /*books = document.getElementById("books");
-    for(element of Books.book){
+    books = document.getElementById("books");
+    /*for(element of Books.book){
         console.log(element);
         createTableRow(element);
     }*/
@@ -26,9 +28,10 @@ async function getBooks(){
 
     console.log(Books);
 
-    Books.array.forEach(element => {
+    for (element of Books){
+        console.log(element);
         createTableRow(element);
-    });
+    }
 }
 
 function createTableRow(el){
@@ -49,6 +52,10 @@ async function getBooksFetch(){
     const path = "https://its.te4.nu/~david/test";
 
     let response = await fetch(path);
+    console.log(response);
+
+     //Felhantering, vad händer om vi inte har några böcker att hämta?
+     
     let json = response.json();
     return json;
 }
