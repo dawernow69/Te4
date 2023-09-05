@@ -3,68 +3,51 @@ body {
 }
 
 .wrapper {
-  display: -ms-grid;
   display: grid;
   background-color: burlywood;
   margin: 0 auto;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 50px auto auto 30px;
-      grid-template-rows: 50px auto auto 30px;
-      grid-template-areas: "header" "articles" "form" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px auto auto 30px;
+  grid-template-areas: "header" "articles" "form" "footer";
 }
 
 header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: header;
   text-align: center;
 }
-
 header h1 {
   margin: 0;
   padding: 0;
 }
 
 main {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: articles;
   margin: 0 auto;
 }
-
 main article h2 {
   text-align: center;
 }
 
 aside {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: form;
   margin: 0 auto;
 }
-
 aside h2 {
   text-align: center;
 }
-
 aside label {
   display: inline-block;
   width: 120px;
   text-align: right;
   padding-right: 10px;
 }
-
-aside input[type="submit"] {
+aside input[type=submit] {
   margin-left: 135px;
 }
 
 footer {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
   grid-area: footer;
 }
-
 footer p {
   margin: 0;
   padding: 0;
@@ -74,11 +57,8 @@ footer p {
 
 @media screen and (min-width: 750px) {
   .wrapper {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 50px auto 30px;
-        grid-template-rows: 50px auto 30px;
-        grid-template-areas: "header header" "articles form" "footer footer";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px auto 30px;
+    grid-template-areas: "header header" "articles form" "footer footer";
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
