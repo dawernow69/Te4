@@ -31,11 +31,12 @@ nav{
         padding: 0;
         
         li{
-         list-style-type: none;
-         font-size: 1.5em;
-         border: 1px solid black;
-         text-align: center;
-         
+            display: grid;
+            list-style-type: none;
+            font-size: 1.5em;
+            border: 1px solid black;
+            text-align: center;
+            align-items: stretch;
          a{
             text-decoration: none;
          }
@@ -49,6 +50,7 @@ main{
 
 footer{
     grid-area: footer;
+    border-top: 5px dotted rosybrown;
     p{
         font-size: small;
         text-align: center;

@@ -27,10 +27,12 @@ nav ul {
   padding: 0;
 }
 nav ul li {
+  display: grid;
   list-style-type: none;
   font-size: 1.5em;
   border: 1px solid black;
   text-align: center;
+  align-items: stretch;
 }
 nav ul li a {
   text-decoration: none;
@@ -42,6 +44,7 @@ main {
 
 footer {
   grid-area: footer;
+  border-top: 5px dotted rosybrown;
 }
 footer p {
   font-size: small;
