@@ -69,6 +69,13 @@ function createArticle(object, counter){
     
 }
 
+/**
+ * Description placeholder
+ * @date 9/12/2023 - 3:55:31 PM
+ *
+ * @param {*} object
+ * @param {*} counter
+ */
 function newParagraph(object, counter){
     let article = document.getElementById("a"+counter);
     let paragraph = document.createElement("p");
@@ -76,6 +83,13 @@ function newParagraph(object, counter){
     article.appendChild(paragraph);
 }
 
+/**
+ * Description placeholder
+ * @date 9/12/2023 - 3:55:40 PM
+ *
+ * @param {*} date
+ * @returns {string}
+ */
 function getDate(date){
     let splitDate = date.split("-");
     let day = splitDate[2];
