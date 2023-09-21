@@ -16,7 +16,7 @@ main{
         h2{
             margin:0;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 2fr 1fr 2fr;
             grid-template-areas: 
             "day . date";
         }
@@ -32,3 +32,13 @@ main{
         }
     }
 }
+
+@media screen and (min-width:1000px) {
+    main{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:center ;
+    }
+}
+

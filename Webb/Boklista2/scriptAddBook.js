@@ -1,5 +1,15 @@
+/**
+ * Description placeholder
+ * @date 9/19/2023 - 2:04:28 PM
+ *
+ * @type {*}
+ */
 let form; //Referens till formuläret
 
+/**
+ * Description placeholder
+ * @date 9/19/2023 - 2:04:27 PM
+ */
 function init(){
     form = document.querySelector("form");
 
@@ -10,6 +20,13 @@ function init(){
 }
 window.onload = init;
 
+/**
+ * Description placeholder
+ * @date 9/19/2023 - 2:04:27 PM
+ *
+ * @async
+ * @returns {*}
+ */
 async function addBook(){
     let author = form.elements.author.value;
     let title = form.elements.title.value;
@@ -30,6 +47,14 @@ async function addBook(){
 }
 
 
+/**
+ * Description placeholder
+ * @date 9/19/2023 - 2:04:27 PM
+ *
+ * @async
+ * @param {object} book
+ * @returns {number}
+ */
 async function postBookFetch(book){
     const path = "";
     const response = await fetch(path,{

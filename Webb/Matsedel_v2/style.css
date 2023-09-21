@@ -16,7 +16,7 @@ main article {
 main article h2 {
   margin: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 2fr;
   grid-template-areas: "day . date";
 }
 main article .day {
@@ -28,4 +28,13 @@ main article .day::first-letter {
 main article .date {
   text-align: right;
   grid-area: date;
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }/*# sourceMappingURL=style.css.map */

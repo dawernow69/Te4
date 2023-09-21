@@ -9,10 +9,10 @@ let dishes = [
     {date:"2021-11-26", dish:"Tisdag rätt 3"},
     {date:"2021-12-27", dish:"Onsdag rätt 1"},
     {date:"2021-12-27", dish:"Onsdag rätt 2"},
-    {date:"2021-13-28", dish:"Torsdag rätt 1"},
-    {date:"2021-13-28", dish:"Torsdag rätt 2"},
-    {date:"2021-00-29", dish:"Fredag rätt 1"},
-    {date:"2021-00-29", dish:"Fredag rätt 2"},
+    {date:"2021-12-28", dish:"Torsdag rätt 1"},
+    {date:"2021-12-28", dish:"Torsdag rätt 2"},
+    {date:"2021-01-29", dish:"Fredag rätt 1"},
+    {date:"2021-01-29", dish:"Fredag rätt 2"},
 ]
 
 let day = [
